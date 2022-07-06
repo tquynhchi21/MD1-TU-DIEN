@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input  id = " timKiem " type = " text " onkeydown = " banPhim (event) " onfocus = " reset () " >
+<button  onclick = " dich () " > Tìm Kiếm </ button >
+<h1 id = " result " > </ h4 >
+<script>
+let  tiengAnh  =  [
+"button" , "age" , "live" , "computer" , "water" ,
+]
+let  tiengViet  =  [
+"nodeBấm" , "tuổi" , "trực tuyến" , "máyTính" , "nước"
+]
+
+
+đặt lại hàm ( ) {
+tài liệu . getElementById ( "timKiem" ) . giá trị = ""
+tài liệu . getElementById ( "kết quả" ) . innerHTML = ""
+}
+function  banPhim ( event ) {
+if ( event . keyCode === 13 ) {
+dich ( )
+}
+}
+
+function  dich ( )  {
+let  duLieu  =  document . getElementById ( "timKiem" ) . giá trị ;
+let  vitri  =  - 1
+for  ( let  i  =  0 ;  i  <  tiengAnh . length ;  i ++ )  {
+if  ( duLieu  ===  tiengAnh [ i ] ) {
+vitri  =  i ;
+}
+}
+if  ( vitri  ===  - 1 ) {
+tài liệu . getElementById ( "kết quả" ) . innerHTML = "Khong co ket qua"
+} khác  {
+tài liệu . getElementById ( "kết quả" ) . innerHTML = tiengViet [ vitri ]
+}
+}
+
+</ script >
+</body>
+</html>
